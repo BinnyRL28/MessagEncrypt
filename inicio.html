@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">MessagEscript</h1>
+    </header>
+    <section>
+        <main>
+            <div class="mensajesinEncriptar">
+                <label for ingresoMensaje>Mensaje
+                <input type="text" 
+                id="ingresoMensaje"
+                name="ingresoMensaje" 
+                placeholder="Escribe tu mensaje aquí"></label>
+            </div>
+            <div class="tipoCodigo">
+                <form>
+                    <label>Escoge de las siguientes opciones
+                    <select name="codigos">
+                        <option value="valor 1">Código Morse</option>
+                    </select>
+                </label>
+                </form>
+            </div>
+            <div class="mensajeEncriptado">
+                <label for ingreseMensaje>Mensaje Encriptado
+                <input type="text" 
+                id="salidaMensaje"
+                name="salidaMensaje" 
+                placeholder="Mensaje Encriptado"></label>
+            </div>
+            <div class="codificacion">
+                <button id="cifrar" type="submit" onclick=""> Cifrar </button>
+                <button id="descifrar" type="submit" onclick=""> Descifrar</button>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <p>bromero@estudiantes.crackthecode.la</p>
+        <p>jgallardo@estudiantes.crackthecode.la</p>
+        <p>ablancas@estudiantes.crackthecode.la</p>
+    </footer>
+    <script src=""></script>
+</body>
+</html>
