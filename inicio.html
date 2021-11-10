@@ -9,16 +9,14 @@
 </head>
 <body>
     <header>
-        <h1 id="titulo">MessagEscript</h1>
+        <h1 id="titulo">MessagEscrypt</h1>
     </header>
     <section>
         <main>
             <div class="mensajesinEncriptar">
-                <label for ingresoMensaje>Mensaje
-                <input type="text" 
-                id="ingresoMensaje"
-                name="ingresoMensaje" 
-                placeholder="Escribe tu mensaje aquí"></label>
+                <label for ingresoMensaje>Mensaje</label>
+                <div>
+                <textarea name="ingresoMensaje" id="ingresoMensaje" placeholder="Escribe tu mensaje aquí" maxlength="128"></textarea></div>
             </div>
             <div class="tipoCodigo">
                 <form>
@@ -30,11 +28,9 @@
                 </form>
             </div>
             <div class="mensajeEncriptado">
-                <label for ingreseMensaje>Mensaje Encriptado
-                <input type="text" 
-                id="salidaMensaje"
-                name="salidaMensaje" 
-                placeholder="Mensaje Encriptado"></label>
+                <label for ingreseMensaje>Mensaje Encriptado</label>
+                <div>
+                    <textarea name="salidaMensaje" id="salidaMensaje" placeholder="Escribe tu mensaje aquí" maxlength="128"></textarea></div>
             </div>
             <div class="codificacion">
                 <button id="cifrar" type="submit" onclick=""> Cifrar </button>
@@ -43,9 +39,9 @@
         </main>
     </section>
     <footer>
-        <p>bromero@estudiantes.crackthecode.la</p>
-        <p>jgallardo@estudiantes.crackthecode.la</p>
-        <p>ablancas@estudiantes.crackthecode.la</p>
+        <p class="correos">bromero@estudiantes.crackthecode.la</p>
+        <p class="correos">jgallardo@estudiantes.crackthecode.la</p>
+        <p class="correos">ablancas@estudiantes.crackthecode.la</p>
     </footer>
     <script src=""></script>
 </body>
