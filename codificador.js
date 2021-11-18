@@ -26,11 +26,34 @@ const x = "-..-"
 const y = "-.--"
 const z = "--.."
 //getElementByTagName es para coger todos los elementos cuya etiqueta sea textarea
+/*
+var tipoCodigo = document.getElementById("codigos").value;
+var codigoMorse = document.getElementById("morse").value;
+var codigoBase64 = document.getElementById("base64").value;
 
-function encriptar(elemento){
-    var ingresoMensaje = document.getElementsByTagName("textarea")[0].value
+function encriptarBase64(){
+    var ingresoMensaje = document.getElementsByTagName("textarea")[0].value;
     var mensajeCodificado = btoa(ingresoMensaje);
     document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
+}
+
+function encriptarCodigoMorse(){
+    var texto ="Si funciona";
+        document.getElementsByTagName("textarea")[1].innerHTML = texto;
+}
+
+function encriptar(elemento){
+    
+    if(tipoCodigo == "Base64"){
+    encriptarBase64();
+    console.log(tipoCodigo);
+    }
+
+    if(tipoCodigo == "Código Morse"){
+       encriptarCodigoMorse();
+    console.log(tipoCodigo);
+    }
+    
 }
 
 function desencriptar(elemento){
@@ -38,21 +61,38 @@ function desencriptar(elemento){
     var mensajeCodificado = atob(ingresoMensaje);
     document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
 }
+*/
 
-let emoji = ':D';
 
-const greet = (name) => {
-  emoji = ':)';
-  const myGreet = () => `Hola ${name} ${emoji}`;
-  return myGreet();
-};
 
-console.log(greet('Laboratoria'));
 
-for (let i = 0; i <= 10; i++) {
-    if (i == 5) {
-      continue;
-    } else {
-      console.log(i);
+function encriptar(elemento){
+    var codigoBase64 = document.getElementById("base64").checked;
+    var codigoMorse = document.getElementById("morse").checked;
+    if(codigoBase64 == true){
+    var ingresoMensaje = document.getElementsByTagName("textarea")[0].value
+    var mensajeCodificado = btoa(ingresoMensaje);
+    document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
     }
-  }
+
+    if(codigoMorse == true){
+        var texto ="Si funciona"
+        document.getElementsByTagName("textarea")[1].innerHTML = texto;
+        
+    }
+}
+
+function desencriptar(elemento){
+    var codigoBase64 = document.getElementById("base64").checked;
+    var codigoMorse = document.getElementById("morse").checked;
+    if(codigoBase64 == true){
+    var ingresoMensaje = document.getElementsByTagName("textarea")[0].value
+    var mensajeCodificado = atob(ingresoMensaje);
+    document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
+    }
+    if(codigoMorse == true){
+        var texto ="Si funciona"
+        document.getElementsByTagName("textarea")[1].innerHTML = texto;
+        
+    }
+}
