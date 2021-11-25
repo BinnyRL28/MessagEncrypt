@@ -16,16 +16,17 @@
             <div class="mensajesinEncriptar">
                 <label for ingresoMensaje>Mensaje</label>
                 <div>
-                <textarea name="ingresoMensaje" id="ingresoMensaje" placeholder="Escribe tu mensaje aquí" maxlength="128"></textarea></div>
+                <textarea name="ingresoMensaje" id="ingresoMensaje" placeholder="Escribe tu mensaje aquí" maxlength="128" spellcheck="false"></textarea></div>
             </div>
             <div class="tipoCodigo">
                 <form>
-                    <label>Escoge de las siguientes opciones
-                    <select name="codigos">
-                        <option value="valor 1">Código Morse</option>
-                        <option value="valor 2">Base64</option>
-                    </select>
-                </label>
+                    <label>Escoge de las siguientes opciones</label>
+                        <label for="base64"> Base64
+                            
+                        </label><input type="radio" id="base64" name="codigo" value="b64">
+                        <label for="morse"> Código Morse
+                            
+                        </label><input type="radio" id="morse" name="codigo" value="m">
                 </form>
             </div>
             <div class="mensajeEncriptado">

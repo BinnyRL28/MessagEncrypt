@@ -38,7 +38,7 @@ function desencriptar(elemento){
 }
 */
 
-console.log("funcionando")
+/*console.log("funcionando")
 
 encriptarCesar()
 
@@ -56,7 +56,7 @@ function encriptarCesar(palabra="esta es la palabra",desfaceIzquierda=10){
     }
     console.log(cesar)
 }
-
+*/
 
 
 function encriptar(elemento){
@@ -97,7 +97,40 @@ function encriptar(elemento){
         }
         cifrarMorse();
         }
-    
+    if(cifradoCesar==true){
+       
+        let mensaje = document.getElementById("ingresoMensaje").value;
+        let desplazamiento = document.getElementById("rango").value;
+
+        function encriptarCesar(palabra , desfase_izquierda= 3) {
+            desfase_izquierda = Math.abs(desfase_izquierda)
+            Alfabeto = "abcdefghijklmnñopqrstuvwxyz";
+            Alfabeto = [...Alfabeto];
+            Cesar = [];
+            for (let i = 0; i < Alfabeto.length; i++) {
+                n = i + 10;
+                if (n >= Alfabeto.length) {
+                    n = n - Alfabeto.length;
+                }
+                Cesar.push(Alfabeto[n])
+            }
+            palabra = [...palabra]
+            retorno = ""
+            for (let i = 0; i < palabra.length; i++) {
+                const letra = palabra[i];
+                let n = Alfabeto.indexOf(letra)
+                if (n == -1) {
+                    retorno += letra;
+                    continue
+                }
+                retorno += Cesar[n]
+            }
+            console.log(retorno)
+            return retorno
+        }encriptarCesar(mensaje, desplazamiento);
+    }else{
+        alert("Selecciona un tipo de Código");
+    }
     }
 
 function desencriptar(elemento){
@@ -136,6 +169,41 @@ function desencriptar(elemento){
         document.getElementById("salidaMensaje").value.toUpperCase = code;
         }
         descifrarMorse();
+    }
+    if(cifradoCesar == true){
+
+        let mensaje = document.getElementById("ingresoMensaje").value;
+        let desplazamiento = document.getElementById("rango").value;
+
+        function desencriptarCesar(palabra , desfase_izquierda ) {
+            desfase_izquierda = Math.abs(desfase_izquierda)
+            Alfabeto = "abcdefghijklmnñopqrstuvwxyz";
+            Alfabeto = [...Alfabeto];
+            Cesar = [];
+            for (let i = 0; i < Alfabeto.length; i++) {
+                n = i + 10;
+                if (n >= Alfabeto.length) {
+                    n = n - Alfabeto.length;
+                }
+                Cesar.push(Alfabeto[n])
+            }
+            palabra = [...palabra]
+            retorno = ""
+            for (let i = 0; i < palabra.length; i++) {
+                const letra = palabra[i];
+                let n = Cesar.indexOf(letra)
+                if (n == -1) {
+                    retorno += letra;
+                    continue
+                }
+                retorno += Alfabeto[n]
+            }
+            console.log(retorno)
+            return retorno
+            
+        }desencriptarCesar(mensaje, desplazamiento);
+    }else{
+        alert("Selecciona un tipo de Codigo")
     }
 }
 
