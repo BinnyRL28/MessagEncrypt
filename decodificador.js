@@ -38,6 +38,24 @@ function desencriptar(elemento){
 }
 */
 
+console.log("funcionando")
+
+encriptarCesar()
+
+function encriptarCesar(palabra="esta es la palabra",desfaceIzquierda=10){
+    desfaceIzquierda = Math.abs(desfaceIzquierda)
+    alfabeto="abcdefghijklmnñopqrstuvwxyz"
+    arr_alfabeto = [...alfabeto]
+    cesar = []
+    for (let i = 0; i < arr_alfabeto.length; i++) {
+        n = i+desfaceIzquierda
+        if (n>=arr_alfabeto.length) {
+            n = n-arr_alfabeto.length
+        }
+        cesar.push(arr_alfabeto[n])
+    }
+    console.log(cesar)
+}
 
 
 
@@ -103,7 +121,7 @@ function desencriptar(elemento){
         function descifrarMorse(){
         let mensaje = document.getElementById("ingresoMensaje").value;
         let arr1 = Array.from(mensaje);
-        let arr2 = 
+        
         console.log(arr1);
         let arr2 = arr1.map(x=>{
             if (mapping[x]){
