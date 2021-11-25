@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="MorseTranslator">
+
+<head>
+    <title>Morse Code translator</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="css/morse.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <style>
+    	textarea{
+    		resize: none;
+    		text-transform: uppercase;
+    	}
+    </style>
+</head>
+
+<body ng-controller="ctrl">
+	<header>
+        <h1 id="titulo">MessagEscrypt</h1>
+    </header>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+	            <div class="form-horizontal">
+	            	<div class="form-group">
+	            		Cada codigo morse puede ser separado por un salto de linea, un pipe (|) o un espacio:
+	            	</div>
+	            	<!--<div class="form-group">
+	            		<a class="btn btn-primary" href="js/simulator.js">
+	            			<i class="glyphicon glyphicon-arrow-right"></i>
+	            			<span>Simulador</span>
+	            		</a>-->
+	            	</div>
+				    <div class="form-group">
+				    	<div class="col-md-5">
+				    		<label for="">Codigo Morse</label>
+				    		<textarea class="form-control" ng-model="morseArea" rows="10" ng-keydown="isValidCode($event)"></textarea>
+				    	</div>
+				    	<div class="col-md-1">
+				    		<div class="col-md-12">
+				    			<!-- <i class="glyphicon glyphicon-retweet"></i> -->
+				    		</div>
+				    	</div>
+				    	<div class="col-md-5">
+				    		<label for="">Alfabeto Latino</label>
+				    		<textarea class="form-control" ng-model="alphabetArea" rows="10"></textarea>
+				    	</div>
+				    </div>
+				    <div class="form-group">
+				    	<fieldset>
+					    				       
+					    </fieldset>
+				    </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>    
+</body>
+<script type="text/javascript" src="js/morse_code.js"></script>
+<script type="text/javascript" src="js/utilities.js"></script>
+<!-- <script type="text/javascript" src="js/actions.js"></script> -->
+<script type="text/javascript" src="js/actions_angular.js"></script>
+
+</html>
