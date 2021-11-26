@@ -23,6 +23,7 @@ header{
 }
 .mensajesinEncriptar{
     margin-top: 30px;
+    margin-right: 500px;
 }
 .tipoCodigo{
     margin-top: 30px;
@@ -32,10 +33,6 @@ header{
 }
 .codificacion{
     margin-top: 30px;
-}
-.mensajesinEncriptar{
-   
-    margin-right: 500px;
 }
 #ingresoMensaje{
     width:800px;
