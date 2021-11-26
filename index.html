@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador</title>
-    <link rel="stylesheet" href="decodificador.css">
+    <link rel="stylesheet" href="assets/css/decodificador.css">
+    <link rel="icon" href="/Semana2/css/Decodificador/Icono.ico.ico">
 </head>
 <body>
     <header>
@@ -25,22 +26,24 @@
             </div>
             <div class="tipoCodigo">
                 <form>
-                    <label>Escoge de las siguientes opciones</label>
-                        <label for="base64"> Base64
-                        </label><input type="radio" id="base64" name="codigo" value="b64">
+                    <label id="escoge">Escoge de las siguientes opciones</label>
+                        <div class ="opciones">
+                            
+                        <label for="base64" id="text_Base64"> Base64 </label>
+                        <input type="radio" id="base64" name="codigo" value="b64"></label>
 
-                        <label for="morse"> Código Morse
-                        </label><input type="radio" id="morse" name="codigo" value="m">
+                        <label for="morse" id="text_morse"> Código Morse</label>
+                        <input type="radio" id="morse" name="codigo" value="m"></label>
 
-                        <label for="cesar"> Cifrado César
-                        </label><input type="radio" id="cesar" name="codigo" value="c">
+                        <label for="cesar" id="text_cesar"> Cifrado César</label>
+                        <input type="radio" id="cesar" name="codigo" value="c"></label></div>
                 </form>
             </div>
             </div>
             <div class="mensajeEncriptado">
-                <label for ingreseMensaje>Mensaje Encriptado</label>
+                <label for="salidaMensaje">Mensaje Encriptado</label>
                 <div>
-                    <textarea name="salidaMensaje" id="salidaMensaje" placeholder="Escribe tu mensaje aquí" maxlength="500"></textarea></div>
+                    <textarea id="salidaMensaje" placeholder="Escribe tu mensaje aquí" disabled></textarea></div>
                 </div>
             <div class="codificacion">
                 <button id="cifrar" type="submit" onclick="encriptar(this)"> Cifrar 🔒 </button> 
@@ -55,7 +58,7 @@
         <p class="correos">jgallardo@estudiantes.crackthecode.la</p>
         <p class="correos">ablancas@estudiantes.crackthecode.la</p>
     </footer>
-    <script src="decodificador.js"></script>
+    <script src="assets/js/decoficador.js"></script>
 </body>
 </html>
 
