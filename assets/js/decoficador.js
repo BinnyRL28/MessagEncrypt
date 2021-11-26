@@ -69,7 +69,7 @@ function encriptar(elemento) {
     if (codigoBase64 == true) {
         var ingresoMensaje = document.getElementsByTagName("textarea")[0].value
         var mensajeCodificado = btoa(ingresoMensaje);
-        document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
+        document.getElementsByTagName("textarea")[1].value = mensajeCodificado;
     }
     else  if (codigoMorse == true) {
         const mapping = {
@@ -139,7 +139,7 @@ function encriptar(elemento) {
             return retorno
         }
 
-        document.getElementById("salidaMensaje").innerHTML = encriptarCesar(mensaje, desplazamiento);
+        document.getElementById("salidaMensaje").value = encriptarCesar(mensaje, desplazamiento);
     } else {
         alert("Selecciona un tipo de Código");
     }
@@ -152,7 +152,7 @@ function desencriptar(elemento) {
     if (codigoBase64 == true) {
         var ingresoMensaje = document.getElementsByTagName("textarea")[0].value
         var mensajeCodificado = atob(ingresoMensaje);
-        document.getElementsByTagName("textarea")[1].innerHTML = mensajeCodificado;
+        document.getElementsByTagName("textarea")[1].value = mensajeCodificado;
     } else if (codigoMorse == true) {
         
         const mapping = {
@@ -179,7 +179,7 @@ function desencriptar(elemento) {
                 }
             });
 
-            let code = arr2.join(" ");
+            let code = arr2.join("");
             console.log(code)
             document.getElementById("salidaMensaje").value = '';
             document.getElementById("salidaMensaje").value = code;
@@ -219,7 +219,7 @@ function desencriptar(elemento) {
 
         }
 
-        document.getElementById("salidaMensaje").innerHTML = desencriptarCesar(mensaje, desplazamiento);
+        document.getElementById("salidaMensaje").value = desencriptarCesar(mensaje, desplazamiento);
     } else {
         alert("Selecciona un tipo de Codigo")
     }
