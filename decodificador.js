@@ -102,13 +102,13 @@ function encriptar(elemento){
         let mensaje = document.getElementById("ingresoMensaje").value;
         let desplazamiento = document.getElementById("rango").value;
 
-        function encriptarCesar(palabra , desfase_izquierda= 3) {
+        function encriptarCesar(palabra , desfase_izquierda) {
             desfase_izquierda = Math.abs(desfase_izquierda)
             Alfabeto = "abcdefghijklmnñopqrstuvwxyz";
             Alfabeto = [...Alfabeto];
             Cesar = [];
             for (let i = 0; i < Alfabeto.length; i++) {
-                n = i + 10;
+                n = i + 6;
                 if (n >= Alfabeto.length) {
                     n = n - Alfabeto.length;
                 }
@@ -127,6 +127,9 @@ function encriptar(elemento){
             }
             console.log(retorno)
             return retorno
+            
+            document.getElementById("salidaMensaje").value.innerHTML = retorno;
+
         }encriptarCesar(mensaje, desplazamiento);
     }else{
         alert("Selecciona un tipo de Código");
