@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador</title>
     <link rel="stylesheet" href="assets/css/decodificador.css">
-    <link rel="icon" href="/Semana2/css/Decodificador/Icono.ico.ico">
+    <link rel="icon" href="/Semana2/css/Decodificador/assets/img/Icono.ico">
 </head>
 <body>
     <header>
@@ -23,6 +23,14 @@
             <div class="rango">
                 <input type="range" id="rango" name="texto" value="10" min="1" max="26" oninput="this.nextElementSibling.value = this.value" >
                 <output>10</output>
+            </div>
+            <div class="comentario">
+                <div class="comentarioCesar burbuja">
+                    <p>Con esta barra de desplazamiento pudes elegir la cantidad de letras que le codigo variará en el alfabeto.
+                    Aclarando que esto solo se utilizará en el cifrado Cesar.
+                    </p>
+                    
+                </div>
             </div>
             <div class="tipoCodigo">
                 <form>
@@ -41,9 +49,13 @@
             </div>
             </div>
             <div class="mensajeEncriptado">
-                <label for="salidaMensaje">Mensaje Encriptado</label>
+                <label id= "label_salidaMensaje" for="salidaMensaje">Mensaje Encriptado
+                   
+                </label>
                 <div>
-                    <textarea id="salidaMensaje" placeholder="Escribe tu mensaje aquí" disabled></textarea></div>
+                    <textarea id="salidaMensaje" placeholder="Aquí tu codigo ya encriptado" disabled></textarea>
+                
+                </div>
                 </div>
             <div class="codificacion">
                 <button id="cifrar" type="submit" onclick="encriptar(this)"> Cifrar 🔒 </button> 

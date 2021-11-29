@@ -224,3 +224,4 @@ function desencriptar(elemento) {
         alert("Selecciona un tipo de Codigo")
     }
 }
+
